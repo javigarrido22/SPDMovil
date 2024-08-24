@@ -16,7 +16,7 @@
  <!--Email-->
   <ion-list>
     <ion-item>
-      <ion-input labelPlacement="stacked" label="Email" placeholder="email@domain.com">
+      <ion-input [(ngModel)]="email" labelPlacement="stacked" label="Email" placeholder="email@domain.com">
         <ion-icon slot="start" name="lock-closed" aria-hidden="true"></ion-icon>
       </ion-input>
     </ion-item>
@@ -25,7 +25,7 @@
   <!--Password-->
   <ion-list>
     <ion-item>
-      <ion-input labelPlacement="stacked" label="Password" type="password" placeholder="**********">
+      <ion-input [(ngModel)]="password" labelPlacement="stacked" label="Password" type="password" placeholder="**********">
         <ion-icon slot="start" name="lock-closed" aria-hidden="true"></ion-icon>
         <ion-button fill="clear" slot="end" aria-label="Show/hide">
           <ion-icon slot="icon-only" name="eye" aria-hidden="true"></ion-icon>
@@ -36,7 +36,7 @@
 
 <!--FIREBASE IDENTIFICADOR javieramorales220998-->
   
-  <ion-button expand="block">Login</ion-button> 
+  <ion-button (click)="logIn()" expand="block">Login</ion-button> 
 
   <ion-grid [fixed]="true">
     <ion-row>
