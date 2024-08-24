@@ -8,9 +8,18 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login', /*pagina a la que redirecciona por defecto */
     pathMatch: 'full'
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./page/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'principal',
+    loadChildren: () => import('./page/principal/principal.module').then( m => m.PrincipalPageModule)
+  },
+
 ];
 
 @NgModule({
