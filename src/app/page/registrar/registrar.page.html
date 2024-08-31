@@ -10,4 +10,28 @@
       <ion-title size="large">registrar</ion-title>
     </ion-toolbar>
   </ion-header>
+
+   <!--Email-->
+   <ion-list>
+    <ion-item>
+      <ion-input [(ngModel)]="email" labelPlacement="stacked" label="Email" placeholder="email@domain.com">
+        <ion-icon slot="start" name="lock-closed" aria-hidden="true"></ion-icon>
+      </ion-input>
+    </ion-item>
+  </ion-list>
+
+  <!--Password-->
+  <ion-list>
+    <ion-item>
+      <ion-input [(ngModel)]="password" labelPlacement="stacked" label="Password" type="password" placeholder="**********">
+        <ion-icon slot="start" name="lock-closed" aria-hidden="true"></ion-icon>
+        <ion-button fill="clear" slot="end" aria-label="Show/hide">
+          <ion-icon slot="icon-only" name="eye" aria-hidden="true"></ion-icon>
+        </ion-button>
+      </ion-input>
+    </ion-item>
+  </ion-list>
+  <div>
+    <ion-button (Click)="Registro()">Registrarse</ion-button>
+  </div>
 </ion-content>
