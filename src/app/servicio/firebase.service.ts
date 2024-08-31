@@ -13,5 +13,20 @@ export class FirebaseService {
     const Request=await this.firebase.signInWithEmailAndPassword(email,password);
     return Request
   }
+
+  async registrar(email:string, password:string){
+    const request=await this.firebase.createUserWithEmailAndPassword(email,password);
+    return request
+  }
+
+  async recuperar(email:string){
+    const request=await this.firebase.sendPasswordResetEmail(email);
+    return request
+  }
+
+  async logout(){
+    await this.firebase.signOut();
+  }
+
     
 }
