@@ -23,6 +23,15 @@ const routes: Routes = [
     canActivate: [AngularFireAuthGuard], data:{authGuardPipe:redireccionarlogin},
     loadChildren: () => import('./page/principal/principal.module').then( m => m.PrincipalPageModule)
   },
+  {
+    path: 'registrar',
+    loadChildren: () => import('./page/registrar/registrar.module').then( m => m.RegistrarPageModule)
+  },
+  {
+    path: 'recuperar',
+    loadChildren: () => import('./page/recuperar/recuperar.module').then( m => m.RecuperarPageModule)
+  },
+
 
 ];
 
