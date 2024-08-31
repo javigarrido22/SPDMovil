@@ -10,4 +10,16 @@
       <ion-title size="large">recuperar</ion-title>
     </ion-toolbar>
   </ion-header>
+
+   <!--Email-->
+   <ion-list>
+    <ion-item>
+      <ion-input [(ngModel)]="email" labelPlacement="stacked" label="Email" placeholder="email@domain.com">
+        <ion-icon slot="start" name="lock-closed" aria-hidden="true"></ion-icon>
+      </ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button (click)="recuperar()" expand="block">Recuperar</ion-button> 
+
 </ion-content>

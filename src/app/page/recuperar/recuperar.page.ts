@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { FirebaseService } from 'src/app/servicio/firebase.service';
 
 @Component({
   selector: 'app-recuperar',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecuperarPage implements OnInit {
 
-  constructor() { }
+
+  email=""
+  
+  constructor(private firebase:FirebaseService, private router:Router) { }
 
   ngOnInit() {
   }
 
+  async recuperar(){
+    const usuario=await this.firebase.recuperar(this.email);
+    console.log(usuario);
+    this.router.navigateByUrl("login");
+
+  }
 }

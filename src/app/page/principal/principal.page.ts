@@ -16,7 +16,7 @@ export class PrincipalPage implements OnInit {
 
   async logout () {
     await this.firebase.logout();
-    this.router.navigateByUrl('login');
+    this.router.navigateByUrl('./login');
   }
 
 }
