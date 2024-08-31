@@ -13,5 +13,9 @@ export class FirebaseService {
     const Request=await this.firebase.signInWithEmailAndPassword(email,password);
     return Request
   }
+
+  async logout(){
+    await this.firebase.signOut();
+  }
     
 }
