@@ -18,28 +18,9 @@
   <ion-content class="ion-padding"> Tap the button in the toolbar to open the menu. </ion-content>
 </div>
 <div>
-  <ion-button (click)="logout()">Logout</ion-button>
+  <ion-button class="boton"(click)="logout()" >Cerrar Sesion</ion-button> 
 </div>
-<ion-tabs>
-  <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="home">
-      <ion-icon name="play-circle"></ion-icon>
-      Listen Now
-    </ion-tab-button>
-    <ion-tab-button tab="radio">
-      <ion-icon name="radio"></ion-icon>
-      Radio
-    </ion-tab-button>
-    <ion-tab-button tab="library">
-      <ion-icon name="library"></ion-icon>
-      Library
-    </ion-tab-button>
-    <ion-tab-button tab="search">
-      <ion-icon name="search"></ion-icon>
-      Search
-    </ion-tab-button>
-  </ion-tab-bar>
-</ion-tabs>
+
 <!--<ion-content>
   <ion-header [translucent]="true">
     <ion-toolbar>
