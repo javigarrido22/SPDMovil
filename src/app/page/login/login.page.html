@@ -12,20 +12,27 @@
       <ion-title class="Iniciar" size="large">Iniciar Sesion</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <br>
+
+  <div class="content">
+    <br>
+    <strong>BIENVENIDO</strong>
+   </div>
   
- <!--Email-->
-  <ion-list>
+  <!--Email-->
+  <ion-list class="email">
     <ion-item>
-      <ion-input [(ngModel)]="email" labelPlacement="stacked" label="Email" placeholder="email@domain.com">
+      <ion-input [(ngModel)]="email"  label="Email" placeholder="email@domain.com">
         <ion-icon slot="start" name="lock-closed" aria-hidden="true"></ion-icon>
       </ion-input>
     </ion-item>
   </ion-list>
 
   <!--Password-->
-  <ion-list>
+  <ion-list class="pass">
     <ion-item>
-      <ion-input [(ngModel)]="password" labelPlacement="stacked" label="Password" type="password" placeholder="**********">
+      <ion-input [(ngModel)]="password" label="Password" type="password" placeholder="**********">
         <ion-icon slot="start" name="lock-closed" aria-hidden="true"></ion-icon>
         <ion-button fill="clear" slot="end" aria-label="Show/hide">
           <ion-icon slot="icon-only" name="eye" aria-hidden="true"></ion-icon>
@@ -36,24 +43,29 @@
 
 <!--FIREBASE IDENTIFICADOR javieramorales220998-->
   
-  <ion-button (click)="logIn()" expand="block">Login</ion-button> 
+  <ion-button class="boton"(click)="logIn()" >Ingresar</ion-button> 
 
   <ion-grid [fixed]="true">
     <ion-row>
       <ion-col class="Registrar">
         <div>
-          <a [routerLink]="['/registrar']">Registrar</a>
+          Registrar
         </div>
       </ion-col>
       <ion-col class="Recuperar">
-        <a [routerLink]="['/recuperar']">Recuperar</a>
+        <div>
+          Recuperar contraseña
+        </div>
       </ion-col>
     </ion-row>
   </ion-grid>
 
 </ion-content>
-<ion-footer>
-  <ion-toolbar>
-    <ion-title>Javiera Morales</ion-title>
-  </ion-toolbar>
+<ion-footer> 
+  <div class="app">
+    <strong>Javiera Morales</strong>
+    <p>Correo: xxxxxxxxx&#64;gmail.com</p>
+    <p>Cel: +569 9999 9999</p>
+    <p>Dirección: av san luis 200, las condes, Chile</p>    
+  </div>
 </ion-footer>
