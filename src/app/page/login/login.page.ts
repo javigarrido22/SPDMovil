@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { catchError } from 'rxjs';
+import { NavigationExtras, Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 import { FirebaseService } from 'src/app/servicio/firebase.service';
 
@@ -23,10 +22,13 @@ password=""
     try {
       let usuario=await this.firebase.auth(this.email, this.password)
       console.log(usuario);
-      this.router.navigateByUrl('principal');
+      const navigationextras:NavigationExtras ={
+        queryParams: {email: this.email, password: this.password}
+      };
+      this.router.navigate(['/principal'],navigationextras);
     } catch (error){
       console.log(error);
-      this.popAlert
+      this.popAlert();
     }
     
   }

@@ -1,4 +1,4 @@
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FirebaseService } from 'src/app/servicio/firebase.service';
 
@@ -9,14 +9,29 @@ import { FirebaseService } from 'src/app/servicio/firebase.service';
 })
 export class PrincipalPage implements OnInit {
 
-  constructor(private firebase:FirebaseService, private router:Router) { }
+  email: string=""
+  pass: string=""
+  valor: number=0
+  /*number=0 en caso de que sean solo numeros*/
+
+  constructor(private firebase:FirebaseService, private router:Router, private activate:ActivatedRoute) {
+    this.activate.queryParams.subscribe(params => {
+
+      this.email=params['email'];
+      this.pass=params ['password'];
+      this.valor=params['valor'];
+      console.log(this.email, this.pass, this.valor);
+    });
+
+
+   }
 
   ngOnInit() {
   }
 
   async logout () {
     await this.firebase.logout();
-    this.router.navigateByUrl('./login');
+    this.router.navigateByUrl('../../login');
   }
 
 }
