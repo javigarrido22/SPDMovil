@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
 <div>
-  <img class="logo" src="../../../assets/img/DuocUc.png" alt="LogoDuoc" >
+  <img class="logo" src="../../../assets/img/IMG_2547.jpg" alt="LogoDuoc" >
 </div>
 </ion-toolbar>
 </ion-header>
@@ -48,14 +48,14 @@
   <ion-grid [fixed]="true">
     <ion-row>
       <ion-col class="Registrar">
-        <div>
+        <a [routerLink]="['/registrar']" routerLinkActivate="router-link-activate">
           Registrar
-        </div>
+        </a>
       </ion-col>
       <ion-col class="Recuperar">
-        <div>
+        <a [routerLink]="['/recuperar']" routerLinkActivate="router-link-activate">
           Recuperar contraseña
-        </div>
+        </a>
       </ion-col>
     </ion-row>
   </ion-grid>
