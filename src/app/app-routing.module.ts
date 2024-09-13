@@ -32,6 +32,12 @@ const routes: Routes = [
     loadChildren: () => import('./page/recuperar/recuperar.module').then( m => m.RecuperarPageModule)
   },
 
+  {
+    path: 'perfil',
+    loadChildren: () => import('./page/perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+
+
 
 ];
 

@@ -1,8 +1,22 @@
+<ion-content>
+  <div>
+  <ion-buttons slot="end">
+    <ion-button (click)="openMenu()">
+      <ion-icon color="primary" slot="icon-only"  name="menu-sharp"></ion-icon>
+   </ion-button>
+    <ion-button [routerLink]="['/perfil']" >
+       <ion-icon class="perfil" color="primary" slot="icon-only"  name="person-circle"></ion-icon>
+    </ion-button>
+  </ion-buttons>
 
-<div><ion-searchbar show-clear-button="always" value="A donde quieres ir?"></ion-searchbar></div>
+  <ion-searchbar show-clear-button="always" value="A donde quieres ir?"></ion-searchbar>
+</div>
+</ion-content>
+
+
 
 <div>
-  <ion-button class="boton"(click)="logout()" >Cerrar sesión</ion-button> 
+  <ion-button class="boton" (click)="logout()" >Cerrar sesión</ion-button> 
 </div>
 
 <!--<ion-content>

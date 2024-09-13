@@ -9,8 +9,10 @@ import { FirebaseService } from 'src/app/servicio/firebase.service';
 })
 export class RegistrarPage implements OnInit {
 
-  email=""
-  password=""
+  email="";
+  password="";
+  nombre="";
+  apellido="";
 
   constructor(private firebase:FirebaseService, private router:Router) { }
 
@@ -18,10 +20,12 @@ export class RegistrarPage implements OnInit {
   }
 
   async Registro(){
-    const usuario=await this.firebase.registrar(this.email,this.password);
+    const usuario=await this.firebase.registrar(this.email,this.password, this.apellido, this.nombre);
     console.log(usuario);
     this.router.navigateByUrl("login");
 
   }
+
+
 
 }

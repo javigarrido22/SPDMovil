@@ -9,13 +9,30 @@
     <img class="logo" src="../../../assets/img/IMG_2547.jpg" alt="LogoDuoc" >
   </div>
   </ion-toolbar>
+<!--Nombre-->
+  <ion-list>
+    <ion-item>
+      <ion-input [(ngModel)]="nombre" labelPlacement="stacked" label="nombre" placeholder="Ingresa nombre">
+        <ion-icon  aria-hidden="true"></ion-icon>
+      </ion-input>
+    </ion-item>
+  </ion-list>
+
+<!--Apellido-->
+  <ion-list>
+    <ion-item>
+      <ion-input [(ngModel)]="apellido" labelPlacement="stacked" label="apellido" placeholder="Ingresa tu apellido">
+        <ion-icon  aria-hidden="true"></ion-icon>
+      </ion-input>
+    </ion-item>
+  </ion-list>
 
 
    <!--Email-->
    <ion-list>
     <ion-item>
       <ion-input [(ngModel)]="email" labelPlacement="stacked" label="Email" placeholder="email@domain.com">
-        <ion-icon slot="start" name="lock-closed" aria-hidden="true"></ion-icon>
+        <ion-icon  aria-hidden="true"></ion-icon>
       </ion-input>
     </ion-item>
   </ion-list>
@@ -24,7 +41,7 @@
   <ion-list>
     <ion-item>
       <ion-input [(ngModel)]="password" labelPlacement="stacked" label="Password" type="password" placeholder="**********">
-        <ion-icon slot="start" name="lock-closed" aria-hidden="true"></ion-icon>
+        <ion-icon  aria-hidden="true"></ion-icon>
         <ion-button fill="clear" slot="end" aria-label="Show/hide">
           <ion-icon slot="icon-only" name="eye" aria-hidden="true"></ion-icon>
         </ion-button>
