@@ -18,3 +18,4 @@ import { PrincipalPage } from './principal.page';
   declarations: [PrincipalPage]
 })
 export class PrincipalPageModule {}
+

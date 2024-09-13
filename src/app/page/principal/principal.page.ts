@@ -1,8 +1,7 @@
-import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { FirebaseService } from 'src/app/servicio/firebase.service';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MenuController } from '@ionic/angular';
-
+import { FirebaseService } from 'src/app/servicio/firebase.service';
 
 @Component({
   selector: 'app-principal',
@@ -11,12 +10,12 @@ import { MenuController } from '@ionic/angular';
 })
 export class PrincipalPage implements OnInit {
 
-  email: string=""
+  email: string =""
   pass: string=""
   valor: number=0
   /*number=0 en caso de que sean solo numeros*/
 
-  constructor(public menucontroler: MenuController,private firebase:FirebaseService, private router:Router, private activate:ActivatedRoute) {
+  constructor(public menucontroller:MenuController, private firebase:FirebaseService, private router:Router, private activate:ActivatedRoute) {
     this.activate.queryParams.subscribe(params => {
 
       this.email=params['email'];
@@ -25,21 +24,17 @@ export class PrincipalPage implements OnInit {
       //console.log(this.email, this.pass, this.valor);
     });
 
-
    }
 
-  ngOnInit() {
+   ngOnInit() {
   }
 
   async logout () {
     await this.firebase.logout();
-    this.router.navigateByUrl('../../login');
+    this.router.navigateByUrl("login")
   }
 
-  openMenu() {
-    console.log('open menu');
-    this.menucontroler.toggle('principal');
-  }
+
 
 
 }
