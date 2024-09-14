@@ -1,36 +1,49 @@
-<ion-header [translucent]="true">
+
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
-</ion-header>
+
+
+
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">PERFIL</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <ion-tabs>
-    <ion-tab-bar slot="bottom">
-      <ion-tab-button [routerLink]="['/']" tab="home">
-        <ion-icon name="home"></ion-icon>
-        Inicio
-      </ion-tab-button>
-      <ion-tab-button tab="search">
-        <ion-icon name="search"></ion-icon>
-        Buscar
-      </ion-tab-button>
-      <ion-tab-button [routerLink]="['/perfil']" tab="person">
+      <ion-title class="titulo">Javiera Morales
         <ion-icon name="person"></ion-icon>
-        Perfil
-      </ion-tab-button>
-    </ion-tab-bar>
-  </ion-tabs>
+      </ion-title>
+    </ion-toolbar>
+
+
+  <ion-list>
+    <ion-item>
+      <ion-input label="Configuracion"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Mensajes"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Administrar cuenta"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Favoritos"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Se conductor"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Ayuda"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Mis Pagos"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <br>
+  <br>
+
 
   <div>
     <ion-button class="boton" (click)="logout()" >Cerrar sesión</ion-button> 
-</div>
-</ion-content>
+  </div>
