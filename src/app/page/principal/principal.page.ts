@@ -15,7 +15,7 @@ export class PrincipalPage implements OnInit {
   valor: number=0
   /*number=0 en caso de que sean solo numeros*/
 
-  constructor(public menucontroller:MenuController, private firebase:FirebaseService, private router:Router, private activate:ActivatedRoute) {
+  constructor(private firebase:FirebaseService, private router:Router, private activate:ActivatedRoute) {
     this.activate.queryParams.subscribe(params => {
 
       this.email=params['email'];
@@ -29,10 +29,6 @@ export class PrincipalPage implements OnInit {
    ngOnInit() {
   }
 
-  async logout () {
-    await this.firebase.logout();
-    this.router.navigateByUrl("login")
-  }
 
 
 

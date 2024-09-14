@@ -4,23 +4,40 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
 
-  <ion-content>
     <div>
       <ion-buttons>
       <ion-button [routerLink]="['/perfil']" >
          <ion-icon class="perfil" color="primary" slot="icon-only"  name="person-circle"></ion-icon>
       </ion-button>
     </ion-buttons>
+    <p class="user">Javiera Morales</p>
   
     <ion-searchbar show-clear-button="always" value="A donde quieres ir?"></ion-searchbar>
   </div>
 
+<ion-content>
   <div>
-    <ion-button class="boton" (click)="logout()" >Cerrar sesión</ion-button> 
+  <img class="mapa" src="../../../assets/img/mapa1.png">
+<!--Por el momento, solo son funcionales las tabs de principal y perfil-->
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button [routerLink]="['/principal']" tab="home">
+        <ion-icon name="home"></ion-icon>
+        Inicio
+      </ion-tab-button>
+      <ion-tab-button tab="search">
+        <ion-icon name="search"></ion-icon>
+        Buscar
+      </ion-tab-button>
+      <ion-tab-button [routerLink]="['/perfil']" tab="person">
+        <ion-icon name="person"></ion-icon>
+        Perfil
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
 </div>
-  </ion-content>
 
 
 </ion-content>
+

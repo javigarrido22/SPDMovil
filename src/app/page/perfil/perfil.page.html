@@ -12,4 +12,25 @@
       <ion-title size="large">PERFIL</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button [routerLink]="['/']" tab="home">
+        <ion-icon name="home"></ion-icon>
+        Inicio
+      </ion-tab-button>
+      <ion-tab-button tab="search">
+        <ion-icon name="search"></ion-icon>
+        Buscar
+      </ion-tab-button>
+      <ion-tab-button [routerLink]="['/perfil']" tab="person">
+        <ion-icon name="person"></ion-icon>
+        Perfil
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+
+  <div>
+    <ion-button class="boton" (click)="logout()" >Cerrar sesión</ion-button> 
+</div>
 </ion-content>
