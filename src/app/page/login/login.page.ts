@@ -15,7 +15,7 @@ email="javi199822@gmail.com"
 password="123456"
 tokenID:any="";
 
-  constructor(private firebase:FirebaseService, private router:Router, private AlertController:AlertController) { }
+  constructor(private firebase:FirebaseService, private router:Router, private AlertController:AlertController, private storage:StorageService) { }
 
   ngOnInit() {
   }
@@ -25,9 +25,11 @@ tokenID:any="";
       let usuario=await this.firebase.auth(this.email, this.password)
       this.tokenID=await usuario.user?.getIdToken();
       console.log(usuario);
+      console.log("token", await usuario.user?.getIdToken());
       const navigationextras:NavigationExtras ={
         queryParams: {email: this.email, password: this.password}
       };
+      this.StorageTest();
       this.router.navigate(['/principal'],navigationextras);
     } catch (error){
       console.log(error);
@@ -45,6 +47,13 @@ tokenID:any="";
 
     })
     await alert.present();
+  }
+
+  async StorageTest(){
+    const jsonToken:any={
+      token:this.tokenID
+    }
+    this.storage.agregarStorage(jsonToken)
   }
 
 }

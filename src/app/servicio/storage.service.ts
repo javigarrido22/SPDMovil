@@ -30,7 +30,9 @@ export class StorageService {
     await Preferences.remove({key:key});
   }
 
-  
+  async agregarStorage(data:any){
+    this.setItem(llave,JSON.stringify (data))
+  }
 
 
 }
