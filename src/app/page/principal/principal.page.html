@@ -24,15 +24,15 @@
 <!--Por el momento, solo son funcionales las tabs de principal y perfil-->
   <ion-tabs>
     <ion-tab-bar slot="bottom">
-      <ion-tab-button [routerLink]="['/principal']" tab="home">
+      <ion-tab-button [routerLink]="['/principal']" >
         <ion-icon name="home"></ion-icon>
         Inicio
       </ion-tab-button>
-      <ion-tab-button tab="search">
+      <ion-tab-button >
         <ion-icon name="search"></ion-icon>
         Buscar
       </ion-tab-button>
-      <ion-tab-button [routerLink]="['/perfil']" tab="person">
+      <ion-tab-button [routerLink]="['/perfil']">
         <ion-icon name="person"></ion-icon>
         Perfil
       </ion-tab-button>
