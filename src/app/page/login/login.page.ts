@@ -53,7 +53,8 @@ tokenID:any="";
     const jsonToken:any={
       token:this.tokenID
     }
-    this.storage.agregarStorage(jsonToken)
+    this.storage.agregarStorage(jsonToken);
+    console.log("OBTENER", await this.storage.obtenerStorage());
   }
 
 }
