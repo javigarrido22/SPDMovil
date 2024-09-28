@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 import { FirebaseService } from 'src/app/servicio/firebase.service';
+import { StorageService } from 'src/app/servicio/storage.service';
 
 @Component({
   selector: 'app-login',
@@ -10,8 +11,9 @@ import { FirebaseService } from 'src/app/servicio/firebase.service';
 })
 export class LoginPage implements OnInit {
 
-email=""
-password=""
+email="javi199822@gmail.com"
+password="123456"
+tokenID:any="";
 
   constructor(private firebase:FirebaseService, private router:Router, private AlertController:AlertController) { }
 
@@ -21,6 +23,7 @@ password=""
   async logIn (){
     try {
       let usuario=await this.firebase.auth(this.email, this.password)
+      this.tokenID=await usuario.user?.getIdToken();
       console.log(usuario);
       const navigationextras:NavigationExtras ={
         queryParams: {email: this.email, password: this.password}
