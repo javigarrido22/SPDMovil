@@ -1,6 +1,9 @@
-<ion-content [fullscreen]="true">
+<ion-content class="background" [fullscreen]="true">
+  <div>
+    <img class="logo" src="../../../assets/img/IMG_2547.jpg" alt="LogoDuoc" >
+  </div>
   
-  <h1>
+  <h1 class="DatosRegistro">
     <ion-list>
       <ion-item>
         <ion-label position="floating">Nombre</ion-label>
@@ -27,7 +30,7 @@
       </ion-item>
     </ion-list>
 
-    <ion-button (click)="registro()">Registrarse</ion-button>
+    <ion-button class="boton" (click)="registro()">Registrarse</ion-button>
   </h1>
 
 </ion-content>
