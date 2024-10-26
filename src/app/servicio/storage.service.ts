@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Preferences } from '@capacitor/preferences';
 
-const llave='Valor@226530.';
+const llave='llaveValor';
 
 
 
@@ -30,10 +30,6 @@ export class StorageService {
     await Preferences.remove({key:key});
   }
 
-  async agregarStorage(data:any){
-    this.setItem(llave,JSON.stringify (data))
-  }
-
   async obtenerStorage(){
     const data=await this.getItem(llave);
     if (data==null){
@@ -41,6 +37,10 @@ export class StorageService {
     } else {
       return JSON.parse(data);
     }
+  }
+
+  async agregarStorage(data:any){
+    this.setItem(llave,JSON.stringify (data))
   }
 
 

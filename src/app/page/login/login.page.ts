@@ -26,8 +26,8 @@ tokenID:any="";
       this.tokenID=await usuario.user?.getIdToken();
       console.log(usuario);
       console.log("token", await usuario.user?.getIdToken());
-      const navigationextras:NavigationExtras ={
-        queryParams: {email: this.email, password: this.password}
+      const navigationextras:NavigationExtras = {
+        queryParams: {email: this.email}
       };
       this.StorageTest();
       this.router.navigate(['/principal'],navigationextras);

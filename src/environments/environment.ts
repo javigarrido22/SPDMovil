@@ -13,7 +13,8 @@ export const environment = {
     storageBucket: "javieramorales220998.appspot.com",
     messagingSenderId: "73109034187",
     appId: "1:73109034187:web:ee353c1d2da5b3bea1b74e"
-  }
+  },
+  apiUrl:"https://uber-nodejs-server-git-d61f89-guillermovillacuratorres-projects.vercel.app/api/"
 };
 
 /*
