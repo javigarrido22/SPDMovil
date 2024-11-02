@@ -37,7 +37,7 @@ export class PrincipalPage implements OnInit {
 
   async cargarUser(){
     let dataStorage = await this.storage.obtenerStorage();
-    const req = await this.apiservice.obtenerUsuario(
+    const req = await this.apiservice['obtenerUsuario'](
       {
         p_correo: this.email,
         token:dataStorage[0].token
@@ -54,13 +54,7 @@ export class PrincipalPage implements OnInit {
   }
 
   async btnObtenerVehiculos(){
-    this.vehiculos = await this.apiservice.obtenerVehiculo();
+    this.vehiculos = await this.apiservice['obtenerVehiculo']();
   }
-
-}
-
-
-
-
 
 }

@@ -40,7 +40,7 @@ export class AgregaVehiculoPage implements OnInit {
     try {
       let dataStorage = await this.storage.obtenerStorage();
       if (this.archivoImagen) {
-        const request = await this.apiservice.agregarVehiculo(
+        const request = await this.apiservice['agregarVehiculo'](
           {
             p_id_usuario: this.usuario[0].id_usuario,
             p_patente: this.patente,
@@ -68,7 +68,7 @@ export class AgregaVehiculoPage implements OnInit {
 
   async cargarUsuario(){
     let dataStorage = await this.storage.obtenerStorage();    
-    const req = await this.apiservice.obtenerUsuario(
+    const req = await this.apiservice['obtenerUsuario'](
       {
         p_correo: this.email,
         token:dataStorage[0].token
