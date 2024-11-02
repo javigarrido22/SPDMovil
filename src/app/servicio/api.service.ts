@@ -13,6 +13,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class ApiService {
+  [x: string]: any;
   httpOptions = {
     headers: new HttpHeaders ({
       'Content-Type': 'application/json',
@@ -76,4 +77,9 @@ interface bodyUser {
   p_correo_electronico: string;
   p_telefono: string;
   token?: string;
+}
+
+interface dataGetUser {
+  p_correo:string;
+  token:string;
 }
