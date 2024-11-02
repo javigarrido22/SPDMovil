@@ -3,7 +3,7 @@ import { NavigationExtras, Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 import { FirebaseService } from 'src/app/servicio/firebase.service';
 import { StorageService } from 'src/app/servicio/storage.service';
-import { UserModel } from 'src/app/models/user';
+
 
 @Component({
   selector: 'app-login',
@@ -12,8 +12,8 @@ import { UserModel } from 'src/app/models/user';
 })
 export class LoginPage implements OnInit {
 
-email="javi199822@gmail.com"
-password="123456"
+email=""
+password=""
 tokenID:any="";
 
   constructor(private firebase:FirebaseService, private router:Router, private AlertController:AlertController, private storage:StorageService) { }

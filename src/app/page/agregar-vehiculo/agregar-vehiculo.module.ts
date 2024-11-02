@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { AgregaVehiculoPageRoutingModule } from './agrega-vehiculo-routing.module';
+import { AgregarVehiculoPageRoutingModule } from './agregar-vehiculo-routing.module';
 
-import { AgregaVehiculoPage } from './agrega-vehiculo.page';
+import { AgregarVehiculoPage } from './agregar-vehiculo.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    AgregaVehiculoPageRoutingModule
+    AgregarVehiculoPageRoutingModule
   ],
-  declarations: [AgregaVehiculoPage]
+  declarations: [AgregarVehiculoPage]
 })
-export class AgregaVehiculoPageModule {}
+export class AgregarVehiculoPageModule {}

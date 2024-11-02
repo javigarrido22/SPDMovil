@@ -1,10 +1,15 @@
-<ion-content class="background">
-
-  <div>
-    <img class="logo" src="../../../assets/img/IMG_2547.jpg" alt="LogoDuoc" >
-  </div>
-
-  <h1>
+<ion-header>
+  <ion-toolbar>
+    <div>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/principal"></ion-back-button>
+      </ion-buttons>
+      <img class="logo" src="../../../assets/img/IMG_2547.jpg" aling="center">
+    </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="background" [fullscreen]="true">  
+  <h1 class="DatosVehiculo">
     <ion-list>
       <ion-item>
         <ion-label position="floating">Patente</ion-label>
@@ -13,17 +18,17 @@
 
       <ion-item>
         <ion-label position="floating">Marca</ion-label>
-        <ion-input [(ngModel)]="marca"></ion-input>
+        <ion-input type="marca" [(ngModel)]="email"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label position="floating">Modelo</ion-label>
-        <ion-input [(ngModel)]="modelo"></ion-input>
+        <ion-input type="tel" [(ngModel)]="modelo"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label position="floating">Año</ion-label>
-        <ion-input [(ngModel)]="anio"></ion-input>
+        <ion-input  [(ngModel)]="anio"></ion-input>
       </ion-item>
 
       <ion-item>
@@ -37,10 +42,11 @@
       </ion-item>
 
       <ion-item>
-        <input type="file" (change)="onFileChange($event)" />
+        <ion-input type="file" (change)="onFileChange($event)"></ion-input>
       </ion-item>
     </ion-list>
 
-    <ion-button (click)="registraVehiculo()" expand="block">Registrar Vehiculo</ion-button>
+    <ion-button class="boton" (click)="registrarVehiculo()">Registrar vehiculo</ion-button>
   </h1>
+
 </ion-content>

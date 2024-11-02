@@ -43,21 +43,15 @@ const routes: Routes = [
     loadChildren: () => import('./page/perfil/perfil.module').then( m => m.PerfilPageModule)
   },
   {
+    path: 'agregar-vehiculo',
+    loadChildren: () => import('./page/agregar-vehiculo/agregar-vehiculo.module').then( m => m.AgregarVehiculoPageModule)
+  },
+  {
     path:'**',
     component: PageNotFoundComponent
   },
-  {
-    path: 'apitest',
-    loadChildren: () => import('./page/apitest/apitest.module').then( m => m.ApitestPageModule)
-  },
-  {
-    path: 'agrega-vehiculo',
-    loadChildren: () => import('./page/agrega-vehiculo/agrega-vehiculo.module').then( m => m.AgregaVehiculoPageModule)
-  },
-  {
-    path: 'listar-vehiculo',
-    loadChildren: () => import('./page/listar-vehiculo/listar-vehiculo.module').then( m => m.ListarVehiculoPageModule)
-  },
+
+
 
 ];
 
