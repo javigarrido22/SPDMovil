@@ -11,6 +11,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { environment } from 'src/environments/environment';
 import { provideHttpClient } from '@angular/common/http';
+import { PhotoComponent } from './component/photo/photo.component';
 
 
 /*
@@ -20,7 +21,7 @@ import { environment } from 'src/environments/environment';
 AngularFireModule.initializeApp(environment.FirebaseAppConfig)
 */
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent,PhotoComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, AngularFireAuthModule, AngularFireModule.initializeApp(environment.firebaseConfig)],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, provideHttpClient()],
   bootstrap: [AppComponent],

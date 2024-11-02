@@ -24,7 +24,7 @@ export class PhotoComponent  implements OnInit {
       source: CameraSource.Camera // Fuente: Cámara
     });
 
-    this.imageUrl = image.webPath; // Guarda la URL de la imagen capturada
+    this.imageUrl = image.webPath; // Guardamos la URL de la imagen capturada
   }
 
 }
