@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/servicio/api.service';
 import { StorageService } from 'src/app/servicio/storage.service';
-import { UserModel } from 'src/app/models/models/usuario';
 import { FirebaseService } from 'src/app/servicio/firebase.service';
+import { UserModel } from 'src/app/models/usuario';
 
 @Component({
   selector: 'app-agregar-vehiculo',
