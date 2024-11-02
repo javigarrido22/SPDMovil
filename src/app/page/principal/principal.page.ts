@@ -4,7 +4,7 @@ import { MenuController } from '@ionic/angular';
 import { ApiService } from 'src/app/servicio/api.service';
 import { FirebaseService } from 'src/app/servicio/firebase.service';
 import { StorageService } from 'src/app/servicio/storage.service';
-import { UserModel } from 'src/app/models/user/user.module';
+import { UserModel } from 'src/app/models/models/usuario';
 
 @Component({
   selector: 'app-principal',
