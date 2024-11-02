@@ -4,6 +4,7 @@ import { MenuController } from '@ionic/angular';
 import { ApiService } from 'src/app/servicio/api.service';
 import { FirebaseService } from 'src/app/servicio/firebase.service';
 import { StorageService } from 'src/app/servicio/storage.service';
+import { UserModel } from 'src/app/models/user';
 
 @Component({
   selector: 'app-principal',
@@ -13,7 +14,8 @@ import { StorageService } from 'src/app/servicio/storage.service';
 export class PrincipalPage implements OnInit {
 
   email:string="";
-  usuario:userModel[]=[];
+  usuario:UserModel[]=[];
+  vehiculos:any[]=[]; 
   /*number=0 en caso de que sean solo numeros*/
 
   constructor(private firebase:FirebaseService, private router:Router, private activate:ActivatedRoute, private storage:StorageService, private apiservice:ApiService) {

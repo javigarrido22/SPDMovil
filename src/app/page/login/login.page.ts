@@ -3,6 +3,7 @@ import { NavigationExtras, Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 import { FirebaseService } from 'src/app/servicio/firebase.service';
 import { StorageService } from 'src/app/servicio/storage.service';
+import { UserModel } from 'src/app/models/user';
 
 @Component({
   selector: 'app-login',
