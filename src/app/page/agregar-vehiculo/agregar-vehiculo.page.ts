@@ -30,7 +30,7 @@ export class AgregarVehiculoPage implements OnInit {
   color:string="";
   tipo_combustible:string="";
 
-  token:string ="";
+  token: string = '';
 
   archivoImagen: File | null = null;
 
@@ -44,7 +44,7 @@ export class AgregarVehiculoPage implements OnInit {
       if (this.archivoImagen) {
         const request = await this.apiservice.agregarVehiculo(
           {
-            p_id_usuario: this.usuario[0].id_usuario,
+            p_id_usuario:this.usuario[0].id_usuario,
             p_patente: this.patente,
             p_marca: this.marca,
             p_modelo: this.modelo,

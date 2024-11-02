@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
-import { MenuController } from '@ionic/angular';
 import { ApiService } from 'src/app/servicio/api.service';
 import { FirebaseService } from 'src/app/servicio/firebase.service';
 import { StorageService } from 'src/app/servicio/storage.service';
-import { UserModel } from 'src/app/models/models/usuario';
+import { UserModel } from 'src/app/models/usuario';
 
 @Component({
   selector: 'app-principal',
@@ -50,10 +49,10 @@ export class PrincipalPage implements OnInit {
   }
 
   async btnRegistrarVehiculo(){
-    const navigationextras:NavigationExtras = {
+    const navigationExtras:NavigationExtras = {
       queryParams: {email: this.email}
     };
-    this.router.navigate(['/agregar-vehiculo'])
+    this.router.navigate(['/agregar-vehiculo'], navigationExtras);
   }
 
   async btnObtenerVehiculos(){
