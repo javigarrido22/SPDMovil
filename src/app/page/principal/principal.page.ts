@@ -57,8 +57,8 @@ export class PrincipalPage implements OnInit {
 
   async btnObtenerVehiculos(){
     this.vehiculos = await this.apiservice.obtenerVehiculo();
-  }
-
+    this.router.navigate(['/listavehiculo']);
+  };
   
 
 }
