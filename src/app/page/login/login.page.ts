@@ -52,7 +52,7 @@ tokenID:any="";
 
   async StorageTest(){
     const jsonToken:any={
-      token:this.tokenID
+      "token":this.tokenID,
     }
     this.storage.agregarStorage(jsonToken);
     console.log("OBTENER", await this.storage.obtenerStorage());

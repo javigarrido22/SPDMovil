@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/servicio/api.service';
 import { StorageService } from 'src/app/servicio/storage.service';
-import { FirebaseService } from 'src/app/servicio/firebase.service';
 import { UserModel } from 'src/app/models/usuario';
+import { FirebaseService } from 'src/app/servicio/firebase.service';
 
 @Component({
   selector: 'app-agregar-vehiculo',
@@ -21,7 +21,7 @@ export class AgregarVehiculoPage implements OnInit {
 
 
   email: string="";
-  usuario:UserModel[]=[];
+  user:UserModel[]=[];
   id_usuario:number=0;
   patente:string="";
   marca:string="";
@@ -30,7 +30,7 @@ export class AgregarVehiculoPage implements OnInit {
   color:string="";
   tipo_combustible:string="";
 
-  token: string = '';
+  token:string = '';
 
   archivoImagen: File | null = null;
 
@@ -44,7 +44,7 @@ export class AgregarVehiculoPage implements OnInit {
       if (this.archivoImagen) {
         const request = await this.apiservice.agregarVehiculo(
           {
-            p_id_usuario:this.usuario[0].id_usuario,
+            p_id_usuario: this.user[0].id_usuario,
             p_patente: this.patente,
             p_marca: this.marca,
             p_modelo: this.modelo,
@@ -77,8 +77,8 @@ export class AgregarVehiculoPage implements OnInit {
         token:dataStorage[0].token
       }
     );
-    this.usuario = req.data;
-    console.log("Datos inicio usuario", this.usuario);
+    this.user = req.data;
+    console.log("Datos inicio usuario", this.user);
   }
 
 }

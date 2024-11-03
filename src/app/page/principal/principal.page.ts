@@ -59,4 +59,6 @@ export class PrincipalPage implements OnInit {
     this.vehiculos = await this.apiservice.obtenerVehiculo();
   }
 
+  
+
 }

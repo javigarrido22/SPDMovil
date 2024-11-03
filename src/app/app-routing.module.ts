@@ -47,9 +47,14 @@ const routes: Routes = [
     loadChildren: () => import('./page/agregar-vehiculo/agregar-vehiculo.module').then( m => m.AgregarVehiculoPageModule)
   },
   {
+    path: 'listavehiculos',
+    loadChildren: () => import('./page/listavehiculos/listavehiculos.module').then( m => m.ListavehiculosPageModule)
+  },
+  {
     path:'**',
     component: PageNotFoundComponent
   },
+
 
 
 
