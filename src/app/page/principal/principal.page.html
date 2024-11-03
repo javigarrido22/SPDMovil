@@ -5,62 +5,77 @@
       <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content class="ion-padding">User:{{email}}</ion-content>
+  <ion-content id="eml" class="ion-padding" >{{email}}
   <ion-img *ngIf="usuario.length > 0" [src]="usuario[0].imagen_usuario"></ion-img>
-  <a [routerLink]="['/photo']" routerLinkActive="router-link-active">Tomar Foto</a>
+  <div>
+    <br>
+    <ion-icon name="list"></ion-icon>
+    <a [routerLink]="['agregar-vehiculo']" class="registrar" (click)="btnRegistrarVehiculo()" expand="block">Registrar Vehiculo</a>
+  </div>
+  <br>
+  <div>
+    <ion-icon name="list-outline"></ion-icon>
+    <a [routerLink]="['listarvehiculo']" class="Obtener" (click)="btnObtenerVehiculos()" expand="block">Obtener Vehiculos</a>
+  </div>
+  <br>
+  <div>
+    <ion-icon name="person-outline"></ion-icon>
+    <a [routerLink]="['/perfil']">Perfil</a>
+  </div>
+  <br>
+  <div>
+    <ion-icon name="log-out-outline"></ion-icon>
+    <a [routerLink]="['/login']" class="logout" (click)="logout">Cerrar sesion</a> 
+  </div></ion-content>
+  <div>
+    <ion-icon name="camera-outline"></ion-icon>
+    <a [routerLink]="['/photo']" routerLinkActive="router-link-active" >Tomar Foto</a>
+  </div>
 </ion-menu>
 
 <div class="ion-page" id="main-content">
   <ion-header>
     <ion-toolbar>
       <ion-buttons slot="start">
-        <ion-menu-button></ion-menu-button>
+        <ion-menu-button auto-hide="false"></ion-menu-button>
       </ion-buttons>
-      <ion-title>Menu</ion-title>
+      <img class="logo" src="../../../assets/img/IMG_4139.PNG" >
     </ion-toolbar>
   </ion-header>
 
 
   <ion-content class="ion-padding">
-    
-  
-    <div>
-      <img class="logo" src="../../../assets/img/IMG_2547.jpg" alt="LogoDuoc" >
-    </div>
-    
+   
     <div class="bnvdo">
       <p>Bienvenido: {{email}}</p>
     </div>
   
-  <div>
-  <img class="mapa" src="../../../assets/img/mapa1.png">
 
-  <div>
-    <ion-img *ngIf="usuario.length > 0" [src]="usuario[0].imagen_usuario"></ion-img>
-  </div>
   
-  <div>
-    <ion-button class="registrar" (click)="btnRegistrarVehiculo()" expand="block">Registrar vehiculo</ion-button>
-  </div>
+    <ion-img *ngIf="usuario.length > 0" [src]="usuario[0].imagen_usuario"></ion-img>
 
-  <div>
-    <ion-button class="obtener" (click)="btnObtenerVehiculos()" expand="block">Obtener vehiculos</ion-button>
-  </div>
+    <div class="viaje">
+      
+    </div>
 
-  <div>
-    <ion-button class="logout" (click)="logout()" expand="block">Cerrar sesión</ion-button>
-  </div>
 
-<!--Por el momento, solo son funcionales las tabs de principal y perfil
+    <ion-picker>
+      <ion-picker-column value="red">
+        <ion-picker-column-option value="" disabled="true">--</ion-picker-column-option>
+        <ion-picker-column-option value="red">Solicitar Viaje</ion-picker-column-option>
+        <ion-picker-column-option value="blue">Publicar Viaje</ion-picker-column-option>
+        <ion-picker-column-option value="green">Estado de viaje</ion-picker-column-option>
+      </ion-picker-column>
+    </ion-picker>
+  </ion-content>
+
+<ion-footer>
+  
   <ion-tabs>
     <ion-tab-bar slot="bottom">
-      <ion-tab-button [routerLink]="['/principal']" >
-        <ion-icon name="home"></ion-icon>
-        Inicio
-      </ion-tab-button>
-      <ion-tab-button >
-        <ion-icon name="search"></ion-icon>
-        Buscar
+      <ion-tab-button [routerLink]="['/viajes']" >
+        <ion-icon name="car"></ion-icon>
+        Viajes
       </ion-tab-button>
       <ion-tab-button [routerLink]="['/perfil']">
         <ion-icon name="person"></ion-icon>
@@ -68,6 +83,6 @@
       </ion-tab-button>
     </ion-tab-bar>
   </ion-tabs>
-</div>-->
-
+  <h1>JAVIERA MORALES</h1>
+</ion-footer>
 

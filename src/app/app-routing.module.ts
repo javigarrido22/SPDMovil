@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AngularFireAuthGuard, redirectUnauthorizedTo} from '@angular/fire/compat/auth-guard';
 import { PageNotFoundComponent } from './component/page-not-found/page-not-found.component';
@@ -34,11 +34,6 @@ const routes: Routes = [
     loadChildren: () => import('./page/recuperar/recuperar.module').then( m => m.RecuperarPageModule)
   },
   {
-    path: 'principal',
-    canActivate: [AngularFireAuthGuard], data:{authGuardPipe:redireccionarlogin},
-    loadChildren: () => import('./page/principal/principal.module').then( m => m.PrincipalPageModule)
-  },
-  {
     path: 'perfil',
     loadChildren: () => import('./page/perfil/perfil.module').then( m => m.PerfilPageModule)
   },
@@ -51,9 +46,18 @@ const routes: Routes = [
     loadChildren: () => import('./page/listavehiculos/listavehiculos.module').then( m => m.ListavehiculosPageModule)
   },
   {
+    path: 'viajes',
+    loadChildren: () => import('./page/viajes/viajes.module').then( m => m.ViajesPageModule)
+  },
+  {
+    path: 'photo',
+    component: PhotoComponent
+  }, 
+  {
     path:'**',
     component: PageNotFoundComponent
   },
+
 
 
 

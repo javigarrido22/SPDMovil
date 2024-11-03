@@ -1,7 +1,7 @@
 <ion-content class="background">
 
 <div>
-  <img class="logo" src="../../../assets/img/IMG_2547.jpg" alt="LogoDuoc" >
+  <img class="logo" src="../../../assets/img/IMG_4139.PNG"  >
 </div>
 
 
@@ -27,11 +27,12 @@
   <!--Password-->
   <ion-list class="pass">
     <ion-item>
-      <ion-input [(ngModel)]="password" label="Password" type="password" placeholder="**********">
-        <ion-icon slot="start" aria-hidden="true"></ion-icon>
-        <ion-button fill="clear" slot="end" aria-label="Show/hide">
-          <ion-icon slot="icon-only" name="eye" aria-hidden="true"></ion-icon>
-        </ion-button>
+      <ion-input [(ngModel)]="password" type="password" label="Password" aria-placeholder="**********">
+        <ion-input-password-toggle slot="start">
+        </ion-input-password-toggle>
+          <ion-button fill="clear" slot="end" aria-label="Show/hide">
+            <ion-icon slot="icon-only" name="eye" aria-hidden="true"></ion-icon>
+          </ion-button>
       </ion-input>
     </ion-item>
   </ion-list>
