@@ -56,7 +56,11 @@ const routes: Routes = [
   {
     path:'**',
     component: PageNotFoundComponent
+  },  {
+    path: 'estado',
+    loadChildren: () => import('./page/estado/estado.module').then( m => m.EstadoPageModule)
   },
+
 
 
 
