@@ -1,10 +1,17 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>listar vehiculos</ion-title>
+    <div>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/principal"></ion-back-button>
+      </ion-buttons>
+    </div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  
+  <img class="logo" src="../../../assets/img/IMG_4139.PNG"  >
+  
   <ion-card *ngFor="let v of vehiculos">
     <h2>Patente: {{v.patente}}</h2>
     <h2>Marca: {{v.marca}}</h2>
