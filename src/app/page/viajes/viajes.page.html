@@ -1,18 +1,32 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>viajes</ion-title>
-  </ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="/principal"></ion-back-button>
+    <h1 class="vj">Viajes</h1>
+  </ion-buttons>
 </ion-header>
 
 
+<ion-content>
+  <div>
+    <img class="logo" src="../../../assets/img/IMG_4139.PNG"  >
+  </div>
+  <h1></h1>
+  <ion-searchbar search-icon="locate" placeholder="Ingresa Punto de Partida"></ion-searchbar>
+  <ion-searchbar search-icon="navigate" placeholder="Ingresa Destino"></ion-searchbar>
+  <img class="map" src="../../../assets/img/MAPA.png">
 
-    <ion-picker>
-      <ion-picker-column value="red">
-        <ion-picker-column-option value="" disabled="true">--</ion-picker-column-option>
-        <ion-picker-column-option value="red">Solicitar Viaje</ion-picker-column-option>
-        <ion-picker-column-option value="blue">Publicar Viaje</ion-picker-column-option>
-        <ion-picker-column-option value="green">Estado de viaje</ion-picker-column-option>
-      </ion-picker-column>
-    </ion-picker>
-    
+  <br><br>
 
+  <ion-button color="dark" size="medium">
+    <ion-icon slot="car" name="car"></ion-icon>
+    Publicar Viaje
+  </ion-button>
+  <ion-button color="dark" size="medium">
+    <ion-icon slot="car" name="car"></ion-icon>
+    Solicitar Viaje
+  </ion-button>
+</ion-content>
+
+<ion-footer>
+
+</ion-footer>

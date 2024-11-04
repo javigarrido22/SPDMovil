@@ -103,27 +103,10 @@
   <ion-picker>
     <ion-picker-column value="red">
       <ion-picker-column-option value="" disabled="true">--</ion-picker-column-option>
-      <ion-picker-column-option value="red">Solicitar Viaje</ion-picker-column-option>
-      <ion-picker-column-option value="blue">Publicar Viaje</ion-picker-column-option>
+      <ion-picker-column-option value="red" [routerLink]="['/viajes']" routerLinkActivate="router-link-activate">Solicitar Viaje</ion-picker-column-option>
+      <ion-picker-column-option value="blue"[routerLink]="['/viajes']" routerLinkActivate="router-link-activate">Publicar Viaje</ion-picker-column-option>
       <ion-picker-column-option value="green">Estado de viaje</ion-picker-column-option>
     </ion-picker-column>
   </ion-picker>
 
 </ion-content>
-
-<ion-footer>
-  
-  <ion-tabs>
-    <ion-tab-bar slot="bottom">
-      <ion-tab-button [routerLink]="['/viajes']" >
-        <ion-icon name="car"></ion-icon>
-        Viajes
-      </ion-tab-button>
-      <ion-tab-button [routerLink]="['/perfil']">
-        <ion-icon name="person"></ion-icon>
-        Perfil
-      </ion-tab-button>
-    </ion-tab-bar>
-  </ion-tabs>
-  <h1>JAVIERA MORALES</h1>
-</ion-footer>
