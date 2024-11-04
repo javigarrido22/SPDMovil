@@ -42,12 +42,16 @@ const routes: Routes = [
     loadChildren: () => import('./page/agregar-vehiculo/agregar-vehiculo.module').then( m => m.AgregarVehiculoPageModule)
   },
   {
-    path: 'listavehiculos',
-    loadChildren: () => import('./page/listavehiculos/listavehiculos.module').then( m => m.ListavehiculosPageModule)
-  },
-  {
     path: 'viajes',
     loadChildren: () => import('./page/viajes/viajes.module').then( m => m.ViajesPageModule)
+  },
+  {
+    path: 'estado',
+    loadChildren: () => import('./page/estado/estado.module').then( m => m.EstadoPageModule)
+  },
+  {
+    path: 'lista-vehiculos',
+    loadChildren: () => import('./page/lista-vehiculos/lista-vehiculos.module').then( m => m.ListaVehiculosPageModule)
   },
   {
     path: 'photo',
@@ -56,9 +60,6 @@ const routes: Routes = [
   {
     path:'**',
     component: PageNotFoundComponent
-  },  {
-    path: 'estado',
-    loadChildren: () => import('./page/estado/estado.module').then( m => m.EstadoPageModule)
   },
 
 

@@ -10,12 +10,12 @@
   <div>
     <br>
     <ion-icon name="list"></ion-icon>
-    <a [routerLink]="['agregar-vehiculo']" class="registrar" (click)="btnRegistrarVehiculo()" expand="block">Registrar Vehiculo</a>
+    <a [routerLink]="['/agregar-vehiculo']" class="registrar" (click)="btnRegistrarVehiculo()" expand="block">Registrar Vehiculo</a>
   </div>
   <br>
   <div>
     <ion-icon name="list-outline"></ion-icon>
-    <a [routerLink]="['listarvehiculo']" class="Obtener" (click)="btnObtenerVehiculos()" expand="block">Obtener Vehiculos</a>
+    <a [routerLink]="['/lista-vehiculos']" class="Obtener" (click)="btnObtenerVehiculos()" expand="block">Obtener Vehiculos</a>
   </div>
   <br>
   <div>
@@ -25,7 +25,7 @@
   <br>
   <div>
     <ion-icon name="log-out-outline"></ion-icon>
-    <a [routerLink]="['/login']" class="logout" (click)="logout">Cerrar sesion</a> 
+    <a [routerLink]="['/login']" class="logout" (click)="logout()">Cerrar sesion</a> 
   </div></ion-content>
   <div>
     <ion-icon name="camera-outline"></ion-icon>
@@ -56,18 +56,60 @@
 
     <div class="viaje">
       
-    </div>
+    </div> 
 
+  <H1>Viajes Publicados</H1>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Nissan Versa</ion-card-title>
+      <ion-card-subtitle>Patente: GKTL62</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Este viaje tiene como destino final: Metro Vicuña Mackenna
+    </ion-card-content>
+  
+    <ion-button fill="clear">Aceptar</ion-button>
+    <ion-button fill="clear">Rechazar</ion-button>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Suzuki Swift</ion-card-title>
+      <ion-card-subtitle>Patente: BVVV33</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Este viaje tiene como destino final: Metro Elisa Correa
+    </ion-card-content>
+  
+    <ion-button fill="clear">Aceptar</ion-button>
+    <ion-button fill="clear">Rechazar</ion-button>
+  </ion-card>
 
-    <ion-picker>
-      <ion-picker-column value="red">
-        <ion-picker-column-option value="" disabled="true">--</ion-picker-column-option>
-        <ion-picker-column-option value="red">Solicitar Viaje</ion-picker-column-option>
-        <ion-picker-column-option value="blue">Publicar Viaje</ion-picker-column-option>
-        <ion-picker-column-option value="green">Estado de viaje</ion-picker-column-option>
-      </ion-picker-column>
-    </ion-picker>
-  </ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Mazda 3</ion-card-title>
+      <ion-card-subtitle>Patente: LKRT59</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Este viaje tiene como destino final: Metro Baquedano
+    </ion-card-content>
+  
+    <ion-button fill="clear">Aceptar</ion-button>
+    <ion-button fill="clear">Rechazar</ion-button>
+  </ion-card>
+
+  <ion-picker>
+    <ion-picker-column value="red">
+      <ion-picker-column-option value="" disabled="true">--</ion-picker-column-option>
+      <ion-picker-column-option value="red">Solicitar Viaje</ion-picker-column-option>
+      <ion-picker-column-option value="blue">Publicar Viaje</ion-picker-column-option>
+      <ion-picker-column-option value="green">Estado de viaje</ion-picker-column-option>
+    </ion-picker-column>
+  </ion-picker>
+
+</ion-content>
 
 <ion-footer>
   

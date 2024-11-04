@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/servicio/api.service';
+
 @Component({
-  selector: 'app-listavehiculos',
-  templateUrl: './listavehiculos.page.html',
-  styleUrls: ['./listavehiculos.page.scss'],
+  selector: 'app-lista-vehiculos',
+  templateUrl: './lista-vehiculos.page.html',
+  styleUrls: ['./lista-vehiculos.page.scss'],
 })
-export class ListavehiculosPage implements OnInit {
+export class ListaVehiculosPage implements OnInit {
 
   constructor(private apiservice:ApiService) { }
 

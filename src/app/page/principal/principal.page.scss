@@ -32,8 +32,6 @@
 ion-picker {
     --highlight-background: var(--ion-color-dark);
     --highlight-border-radius: 50px;
-  
-    --fade-background-rgb: var(--ion-color-light-rgb);
   }
   
   ion-picker-column-option {
@@ -41,7 +39,7 @@ ion-picker {
     background-size: auto auto;
     background-clip: border-box;
     background-size: 200% auto;
-    color: #fff;
+    color: white;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
