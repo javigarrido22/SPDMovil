@@ -11,7 +11,7 @@ export class PhotoComponent  implements OnInit {
   imageUrl: string | undefined;
 
   constructor() {
-    Camera.requestPermissions(); //comentar linea para la prueba NO OLVIDAR
+   // Camera.requestPermissions(); //comentar linea para la prueba NO OLVIDAR
    }
 
   ngOnInit() {}
