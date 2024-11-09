@@ -4,6 +4,9 @@
     "@ionic/angular/standalone"
   ],
   "cSpell.words": [
-    "redireccionar"
+    "redireccionar",
+    "servicio",
+    "usuario",
+    "vehiculos"
   ]
 }
