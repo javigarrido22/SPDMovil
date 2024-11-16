@@ -20,3 +20,5 @@ Instalar aplicacion en el celular y mostrar flujo al profe, debe tener una logic
 revisar npm run test, todo debe estar correcto
 
 https://capacitorjs.com/docs
+
+https://capacitorjs.com/docs/guides/splash-screens-and-icons
