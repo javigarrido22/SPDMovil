@@ -18,3 +18,5 @@ luego generar un html (solo 1) donde se ponga el qr de descarga y una descripci√
 Instalar aplicacion en el celular y mostrar flujo al profe, debe tener una logica correcta y estar funcional
 
 revisar npm run test, todo debe estar correcto
+
+https://capacitorjs.com/docs
