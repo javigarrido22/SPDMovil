@@ -22,3 +22,17 @@ revisar npm run test, todo debe estar correcto
 https://capacitorjs.com/docs
 
 https://capacitorjs.com/docs/guides/splash-screens-and-icons
+
+GENERAR APK instalador
+--ionic build
+--npx cap sync android
+
+para la firma
+proyecto en android studio
+build
+android app bunddle
+agregar la clave (guardar en carpeta key a crear)
+nombre de archivo AppStoreKey
+password --> la primera es para appstore
+password 2 --> para el storage
+
