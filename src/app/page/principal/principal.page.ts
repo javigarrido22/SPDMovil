@@ -84,6 +84,10 @@ export class PrincipalPage implements OnInit {
     }
   }
 
+  async cargarViajes() {
+    let dataStorage = await this.apiservice.obtenerViaje();
+  }
+
   async cargarUsuario(){
     let dataStorage = await this.storage.obtenerStorage();
     const req = await this.apiservice.obtenerUsuario(
