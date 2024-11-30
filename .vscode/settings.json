@@ -8,5 +8,6 @@
     "servicio",
     "usuario",
     "vehiculos"
-  ]
+  ],
+  "java.configuration.updateBuildConfiguration": "interactive"
 }
