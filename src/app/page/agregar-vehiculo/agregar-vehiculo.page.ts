@@ -39,6 +39,7 @@ export class AgregarVehiculoPage implements OnInit {
   }
 
   async registrarVehiculo () {
+    console.log('metodo Registro');
     try {
       let dataStorage = await this.storage.obtenerStorage();
       if (this.archivoImagen) {
