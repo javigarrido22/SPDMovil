@@ -1,4 +1,4 @@
-package io.ionic.starter;
+package com.SPDMovil;
 
 import com.getcapacitor.BridgeActivity;
 
