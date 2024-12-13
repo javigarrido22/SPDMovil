@@ -30,8 +30,8 @@ export class AgregarVehiculoPage implements OnInit {
   color:string="";
   tipo_combustible:string="";
 
-  token:string = '';
-
+  token:string='eyJhbGciOiJSUzI1NiIsImtpZCI6ImU2YWMzNTcyNzY3ZGUyNjE0ZmM1MTA4NjMzMDg3YTQ5MjMzMDNkM2IiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vamF2aWVyYW1vcmFsZXMyMjA5OTgiLCJhdWQiOiJqYXZpZXJhbW9yYWxlczIyMDk5OCIsImF1dGhfdGltZSI6MTczMDU4NjA4NiwidXNlcl9pZCI6InhvTkUwR05FOXBVYXJPSE9vc1JINGN1SjZMNDIiLCJzdWIiOiJ4b05FMEdORTlwVWFyT0hPb3NSSDRjdUo2TDQyIiwiaWF0IjoxNzMwNTg2MDg2LCJleHAiOjE3MzA1ODk2ODYsImVtYWlsIjoiamF2aTE5OTgyMkBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsiamF2aTE5OTgyMkBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.SHyCHmGSR9BjF2kla_xV-Amf9OpNlMFQHQFqfYGgrUBDjeMGGcstSwa7EJVll33CXNSsrm5LDth39O9E7_J205obNk8GGj5p4rEIk_TIs_9ylQ719YYFq_BhMnsonpqjw-z5upyYqEmRGBcBwciu1zxv7LBgdtjP0UEvv1wkHi1SrXxRaWHXXNE5ZsBJADgKo9_9te71L9qNalDMwXPg1QWDkFiRX1hxpdUOT1koxIy0Gj6WdSndS2oZlzmi_k5ckVmq5oxJk5gq6H8oDC1OvSF5tHt8gZTt_2UuUKgFJb-DNXqHj1znGVyKNi2PfbaJsuA11kDuwAp2eB3NNYczJg';
+  
   archivoImagen: File | null = null;
 
   ngOnInit() {
@@ -42,10 +42,11 @@ export class AgregarVehiculoPage implements OnInit {
     console.log('metodo Registro');
     try {
       let dataStorage = await this.storage.obtenerStorage();
+      console.log('data storage');
       if (this.archivoImagen) {
         const request = await this.apiservice.agregarVehiculo(
           {
-            p_id_usuario: this.user[0].id_usuario,
+            p_id_usuario: this.id_usuario,
             p_patente: this.patente,
             p_marca: this.marca,
             p_modelo: this.modelo,
@@ -57,6 +58,7 @@ export class AgregarVehiculoPage implements OnInit {
           },
           this.archivoImagen
         );
+        console.log('agrega vehiculo');
       }
       this.router.navigateByUrl('principal');
     } catch (error) {

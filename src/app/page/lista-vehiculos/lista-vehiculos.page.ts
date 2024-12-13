@@ -18,9 +18,12 @@ export class ListaVehiculosPage implements OnInit {
   }
 
   async btnObtenerVehiculos(){
+    console.log('boton')
     const req = await this.apiservice.obtenerVehiculo();
     this.vehiculos=req.data;
+    console.log('data')
   }
+  
 
 
 }
