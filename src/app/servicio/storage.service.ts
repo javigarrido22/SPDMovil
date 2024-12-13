@@ -3,8 +3,6 @@ import { Preferences } from '@capacitor/preferences';
 
 const llave='llaveValor';
 
-
-
 @Injectable({
   providedIn: 'root'
 })
@@ -21,27 +19,26 @@ export class StorageService {
       return null;
     }
   }
- 
-  private async setItem(key:string,valor:string){ 
+
+  private async setItem(key:string,valor:string){
     await Preferences.set({key:key,value:valor});
   }
- 
+
   private async removeItem(key:string){
     await Preferences.remove({key:key});
   }
 
   async obtenerStorage(){
-    const data=await this.getItem(llave);
-    if (data==null){
-      return []
+    const data = await this.getItem(llave);
+    if (data==null) {
+      return [];
     } else {
       return JSON.parse(data);
     }
   }
 
   async agregarStorage(data:any){
-    this.setItem(llave,JSON.stringify (data))
+    this.setItem(llave,JSON.stringify(data));
   }
-
 
 }

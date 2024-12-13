@@ -142,7 +142,8 @@ export class ApiService {
     }
   }
 
-  async obtenerVehiculo(p0?: { p_id: number; token: any; }){
+  async obtenerVehiculo(){
+    console.log('obtenervehiculo')
     try {
       const params = {
         p_id: 142,
@@ -165,7 +166,7 @@ export class ApiService {
         formData.append('token', data.token);
       }
       const response = await lastValueFrom(
-        this.http.post<any>(environment.apiUrl + 'viaje/ actualiza_estado_viaje', formData)
+        this.http.post<any>(environment.apiUrl + 'viaje/actualiza_estado_viaje', formData)
       );
       return response;
     }catch (error) {

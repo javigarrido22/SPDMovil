@@ -13,9 +13,9 @@ export class EstadoPage implements OnInit {
 
   constructor(private firebase:FirebaseService, private router:Router, private activate:ActivatedRoute, private storage:StorageService, private apiservice:ApiService) {}
 
-  id_estado: string="";
-  id: string="";
-  token:string="";
+  id_estado: string='';
+  id: string='';
+  token:string = '';
   
 
   ngOnInit() {

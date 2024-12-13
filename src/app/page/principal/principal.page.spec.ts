@@ -5,9 +5,8 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
 import { ActivatedRoute } from '@angular/router';
 import { of } from 'rxjs';
-import { HttpClient, provideHttpClient } from '@angular/common/http';
-import { provideRouter } from '@angular/router';
-
+import { HttpClientTestingModule } from '@angular/common/http/testing'; // Importa HttpClientTestingModule
+import { RouterTestingModule } from '@angular/router/testing'; // Para pruebas de rutas
 
 describe('PrincipalPage', () => {
   let component: PrincipalPage;
@@ -15,10 +14,18 @@ describe('PrincipalPage', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations:[HttpClient],
-      imports: [AngularFireAuthModule, HttpClient, AngularFireModule.initializeApp(environment.firebaseConfig)],
-      providers: [provideHttpClient, { provide: ActivatedRoute, useValue: { queryParams: of({ email: 'email@gmail.com' }) } }]
-    })
+      declarations: [PrincipalPage], // Declara el componente PrincipalPage
+      imports: [
+        AngularFireAuthModule,
+        AngularFireModule.initializeApp(environment.firebaseConfig),
+        HttpClientTestingModule, // Añade HttpClientTestingModule
+        RouterTestingModule // Añade RouterTestingModule para las rutas
+      ],
+      providers: [
+        { provide: ActivatedRoute, useValue: { queryParams: of({ email: 'email@gmail.com' }) } }
+      ]
+    }).compileComponents(); // Asegúrate de compilar los componentes
+
     fixture = TestBed.createComponent(PrincipalPage);
     component = fixture.componentInstance;
     fixture.detectChanges();

@@ -51,13 +51,14 @@ tokenID:any="";
   }
 
   async StorageTest(){
-    const jsonToken:any={
-      "token":this.tokenID,
-    }
+    const jsonToken:any=[
+      {
+        "token":this.tokenID,
+      }
+    ];
     this.storage.agregarStorage(jsonToken);
-    console.log("OBTENER", await this.storage.obtenerStorage());
+    console.log(await this.storage.obtenerStorage());
   }
 
 }
-
 /*Final clase*/

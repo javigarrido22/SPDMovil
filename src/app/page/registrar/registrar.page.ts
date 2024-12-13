@@ -33,7 +33,7 @@ export class RegistrarPage implements OnInit {
     try {
       let usuario = await this.firebase.registro(this.email, this.password);
       const token = await usuario.user?.getIdToken();
-      if(this.archivoImagen) {
+      if (this.archivoImagen) {
         const request = await this.Registrar.agregarUsuario(
           {
             p_correo_electronico: this.email,
