@@ -22,7 +22,7 @@ export class AgregarVehiculoPage implements OnInit {
 
   email: string="";
   user:UserModel[]=[];
-  id_usuario:number=0;
+  id_usuario:number=142;
   patente:string="";
   marca:string="";
   modelo:string="";

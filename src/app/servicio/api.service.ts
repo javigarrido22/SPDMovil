@@ -19,7 +19,6 @@ export class ApiService {
     }),
   };
 
-  //url de ejemplo
   apiURL = 'https://uber-nodejs-server-git-d61f89-guillermovillacuratorres-projects.vercel.app/api/';
 
   p_id: string='142';
@@ -116,7 +115,7 @@ export class ApiService {
     }
   }
 
-  async obtenerViaje(){
+  async obtenerViaje(p0: { p_id_usuario: number; token: any; }){
     try{
       const params = {
         p_id_usuario: this.p_id,

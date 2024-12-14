@@ -54,6 +54,10 @@ const routes: Routes = [
     loadChildren: () => import('./page/lista-vehiculos/lista-vehiculos.module').then( m => m.ListaVehiculosPageModule)
   },
   {
+    path: 'ver-viajes',
+    loadChildren: () => import('./page/ver-viajes/ver-viajes.module').then( m => m.VerViajesPageModule)
+  },
+  {
     path: 'photo',
     component: PhotoComponent
   }, 
@@ -61,6 +65,8 @@ const routes: Routes = [
     path:'**',
     component: PageNotFoundComponent
   },
+
+
 
 
 
